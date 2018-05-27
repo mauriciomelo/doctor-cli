@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "doctor.js",
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/mauriciomelo/doctor-cli.git"
+  },
   "scripts": {
     "test": "jest ."
   },
   "bin": {
     "doctor": "index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mauricio Melo",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "jest": "^23.0.0"
