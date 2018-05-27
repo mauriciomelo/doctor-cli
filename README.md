@@ -1,5 +1,7 @@
 # doctor-cli
 
+[![CircleCI](https://circleci.com/gh/mauriciomelo/doctor-cli/tree/master.svg?style=svg)](https://circleci.com/gh/mauriciomelo/doctor-cli/tree/master)
+
 Create a doctor command to help diagnose configuration issues of your projects.
 
 ## Usage
