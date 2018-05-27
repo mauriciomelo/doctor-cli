@@ -1,0 +1,17 @@
+{
+  "name": "doctor-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "doctor.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "bin": {
+    "doctor": "index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.0.0"
+  }
+}

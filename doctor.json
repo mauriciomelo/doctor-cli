@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "title": "Docker is running",
+      "check": "docker ps"
+    },
+    {
+      "title": "Is online",
+      "check": "ping google.com -c 1"
+    },
+    {
+      "title": "This will fail",
+      "check": "exit 1"
+    }
+  ]
+}
