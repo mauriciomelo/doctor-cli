@@ -1,11 +1,11 @@
 {
   "name": "doctor-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "doctor.js",
   "repository": {
-   "type": "git",
-   "url": "https://github.com/mauriciomelo/doctor-cli.git"
+    "type": "git",
+    "url": "https://github.com/mauriciomelo/doctor-cli.git"
   },
   "scripts": {
     "test": "jest ."
