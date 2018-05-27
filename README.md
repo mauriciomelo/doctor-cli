@@ -4,6 +4,12 @@
 
 Create a doctor command to help diagnose configuration issues of your projects.
 
+## Install
+
+```
+npm i doctor-cli -g
+```
+
 ## Usage
 
 `title`: Title of the individual check.
