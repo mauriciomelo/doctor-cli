@@ -9,8 +9,17 @@
       "check": "ping google.com -c 1"
     },
     {
+      "title": "This will pass",
+      "check": "exit 0"
+    },
+    {
       "title": "This will fail",
       "check": "exit 1"
+    },
+    {
+      "title": "File.txt exists",
+      "check": "test -f File.txt",
+      "fix": "touch File.txt"
     }
   ]
 }

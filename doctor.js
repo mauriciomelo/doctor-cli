@@ -15,6 +15,7 @@ const parse = ({ checks }) =>
           const message = `${symbol}  ${check.title}`;
           resolve({
             message,
+            fix: check.fix,
             ok,
           });
         })

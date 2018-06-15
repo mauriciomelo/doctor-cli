@@ -36,6 +36,24 @@ describe('doctor', () => {
       expect(await checks[0]).toEqual(expect.objectContaining({ ok: false }));
     });
 
+    it('includes fix tip when check fails', async () => {
+      const config = {
+        checks: [
+          {
+            check: 'docker ps',
+            fix: 'command --that-fixes',
+          },
+        ],
+      };
+      exec.mockImplementationOnce((cmd, cb) => cb(new Error()));
+
+      const checks = await doctor.parse(config);
+      expect(exec).toBeCalledWith('docker ps', expect.anything());
+      expect(await checks[0]).toEqual(
+        expect.objectContaining({ fix: 'command --that-fixes' })
+      );
+    });
+
     it('adds success symbol when check is ok', async () => {
       const config = {
         checks: [

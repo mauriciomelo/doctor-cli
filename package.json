@@ -15,7 +15,9 @@
   },
   "author": "Mauricio Melo",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
   "devDependencies": {
     "jest": "^23.0.0"
   }

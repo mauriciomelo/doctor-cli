@@ -16,6 +16,8 @@ npm i doctor-cli -g
 
 `check`: Shell command that will evaluate to either success or error based on the exit code (exit 1 = error, exit 0 = success).
 
+`fix`: Show a fix hint when check fails
+
 ##### Sample
 
 Create a JSON file named `doctor.json` with the following content:
@@ -32,8 +34,17 @@ Create a JSON file named `doctor.json` with the following content:
       "check": "ping google.com -c 1"
     },
     {
+      "title": "This will pass",
+      "check": "exit 0"
+    },
+    {
       "title": "This will fail",
       "check": "exit 1"
+    },
+    {
+      "title": "File.txt exists",
+      "check": "test -f File.txt",
+      "fix": "touch File.txt"
     }
   ]
 }
@@ -43,14 +54,20 @@ Run `doctor`, the output should be similar to:
 
 ```
 $ doctor
-
 👩‍⚕️ Checking your system for configuration problems...
 
-   ❌  This will fail
 
-   ✅  Is online
+  ❌  File.txt exists
+        Fix:
+        touch File.txt
 
-   ✅  Docker is running
+  ❌  This will fail
 
-   🤒
+  ✅  This will pass
+
+  ✅  Docker is running
+
+  ✅  Is online
+
+  🤒
 ```
